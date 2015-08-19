@@ -70,10 +70,10 @@ class SCMBackend(object):
 
 def _to_str(obj):
 
-    if not isinstance(obj, str):
-        return obj.decode()
-
     if obj == None:
         return ""
+
+    if not isinstance(obj, str):
+        return obj.decode()
 
     return obj
