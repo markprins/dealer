@@ -69,6 +69,11 @@ class SCMBackend(object):
 
 
 def _to_str(obj):
+
     if not isinstance(obj, str):
         return obj.decode()
+
+    if obj == None:
+        return ""
+
     return obj
